@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "../header/rectangle.hpp"
 #include "../header/triangle.hpp"
 
@@ -14,20 +15,16 @@ int main()
         int width;
         int height;
         cout << "Enter a width for the rectangle: " << endl;
-        if(width < 0){
+        while(!(cin >> width) || width < 0){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Please enter a correct dimension for the width: " << endl;
-            cin >> width;
-        }
-        else{
-            cin >> width;
         }
         cout << "Enter a height for the rectangle: " << endl;
-        if(height < 0){
+        while(!(cin >> height) || height < 0){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Please enter a correct dimension for the height: " << endl;
-            cin >> height;
-        }
-        else{
-            cin >> height;
         }
         newrect.set_width(width);
         newrect.set_height(height);
@@ -38,20 +35,16 @@ int main()
         int base;
         int height;
         cout << "Enter a base for the triangle: " << endl;
-        if(base < 0){
+        while(!(cin >> base) || base < 0){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Please enter a correct dimension for the base: " << endl;
-            cin >> base;
-        }
-        else{
-            cin >> base;
         }
         cout << "Enter a height for the triangle: " << endl;
-        if(height < 0){
+        while(!(cin >> height) || height < 0){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Please enter a correct dimension for the height: " << endl;
-            cin >> height;
-        }
-        else{
-            cin >> height;
         }
         newtri.set_base(base);
         newtri.set_height(height);

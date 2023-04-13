@@ -9,3 +9,9 @@ ADD_EXECUTABLE(bigger_area_calculator
     src/new_main.cpp
     src/rectangle.cpp
 )
+
+ADD_EXECUTABLE(shape_area_calculator
+    src/rectangle.cpp
+    src/triangle.cpp
+    src/shape_main.cpp
+)
